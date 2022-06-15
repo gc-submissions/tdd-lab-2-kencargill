@@ -20,29 +20,25 @@ function getCoins (cents) {
 
     for (cents ; cents > 0;) {
         if (cents >= 25) {
-         remainder = cents % 25
-         amtInCoin = cents - remainder
-         quarters = amtInCoin / 25
-         cents = remainder
-        //  console.log(`q-cents = ${cents}, q = ${quarters} `);
+            remainder = cents % 25
+            amtInCoin = cents - remainder
+            quarters = amtInCoin / 25
+            cents = remainder
         } else if (cents >= 10){
-         remainder = cents % 10
-         amtInCoin = cents - remainder
-         dimes = amtInCoin / 10
-         cents = remainder
-        //  console.log(`d-cents = ${cents}, d = ${dimes} `);
+            remainder = cents % 10
+            amtInCoin = cents - remainder
+            dimes = amtInCoin / 10
+            cents = remainder
         } else if (cents >= 5){
-         remainder = cents % 5
-         amtInCoin = cents - remainder
-         nickels = amtInCoin / 5
-         cents = remainder
-        //  console.log(`n-cents = ${cents}, n = ${nickels} `);
+            remainder = cents % 5
+            amtInCoin = cents - remainder
+            nickels = amtInCoin / 5
+            cents = remainder
         } else if (cents >= 1){
-         remainder = cents % 1
-         amtInCoin = cents - remainder
-         pennies = amtInCoin / 1
-         cents = remainder
-        //  console.log(`p-cents = ${cents}, p = ${pennies} `);
+            remainder = cents % 1
+            amtInCoin = cents - remainder
+            pennies = amtInCoin / 1
+            cents = remainder    
         }}
 
 return {

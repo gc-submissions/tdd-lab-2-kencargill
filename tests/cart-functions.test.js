@@ -55,7 +55,9 @@ describe("isSufficientPayment", () => {
 describe("calculateTotal", () => {
   test('calculates the total with one item', () => {
     // arrange
-    const items = [{ name:"ball", price: 4.99 }];
+    const items = [
+      { name:"ball", price: 4.99 }
+    ];
 
     // act
     const total = calculateTotal(items);
@@ -116,18 +118,25 @@ describe("addItem", () => {
     addItem(itemsArray, "beans", 3);
 
     // assert
-    expect(itemsArray).toContainEqual({name: "beans", price: 3});
+    expect(itemsArray).toContainEqual(
+      {name: "beans", price: 3}
+      );
   });
 
   test('add sugar to array with beans', () => {
     // arrange
-    let itemsArray = [{name: "beans", price: 3}];
+    let itemsArray = [
+      {name: "beans", price: 3}
+    ];
 
     // act
     addItem(itemsArray, "sugar", 2);
 
     // assert
-    expect(itemsArray).toContainEqual({name: "beans", price: 3}, {name: "sugar", price: 2});
+    expect(itemsArray).toContainEqual(
+      {name: "beans", price: 3}, 
+      {name: "sugar", price: 2}
+      );
   });
 
   test('add cheetos to array with three items', () => {
@@ -182,7 +191,10 @@ describe("removeItem", () => {
     removeItem(itemsArray, 2);
 
     // assert
-    expect(itemsArray).toContainEqual({name: "sugar", price: 2}, {name: "milk", price: 1});
+    expect(itemsArray).toContainEqual(
+      {name: "sugar", price: 2}, 
+      {name: "milk", price: 1}
+      );
   });
 
   test("remove middle element in array", () => {
@@ -197,7 +209,10 @@ describe("removeItem", () => {
     removeItem(itemsArray, 1);
 
     // assert
-    expect(itemsArray).toContainEqual({name: "sugar", price: 2}, {name: "cheetos", price: 1});
+    expect(itemsArray).toContainEqual(
+      {name: "sugar", price: 2}, 
+      {name: "cheetos", price: 1}
+      );
   });
 
   test("remove only element in array", () => {
@@ -210,7 +225,9 @@ describe("removeItem", () => {
     removeItem(itemsArray, 0);
 
     // assert
-    expect(itemsArray).not.toContainEqual({name: "sugar", price: 2});
+    expect(itemsArray).not.toContainEqual(
+      {name: "sugar", price: 2}
+      );
   });
 
 });
